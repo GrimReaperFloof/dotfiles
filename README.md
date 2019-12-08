@@ -3,9 +3,14 @@
 Requirements:  
 `stow`  
 i3: `i3`, `polybar`, `dunst`, `picom`  
-zsh: `lf`, `oh-my-zsh`  
 termite: `termite`  
+zsh: `lf`, `oh-my-zsh`  
+pulseaudio: `pulseaudio`, `jack` or `jack2`, `pulseaudio-jack`  
+jackd.service: `systemd`, `jack` or `jack2`  
 
 `stow i3` - sets up i3, polybar, dunst, and picom  
 `stow termite` - sets up termite  
 `stow zsh` - oh-my-zsh + lfcd keybind from Luke Smith (press Ctrl + O)  
+`stow pulseaudio` - PulseAudio configuration for PulseAudio over JACK  
+`stow jackd.service` - a jackd service you can use with systemd (user-based). Start with `systemctl start jackd --user`  
+

@@ -1,0 +1,9 @@
+[Unit]
+Description=jackd service
+
+[Service]
+ExecStart=jackd -R -dalsa -r48000 -p256 -n2
+
+[Install]
+WantedBy=default.target
+

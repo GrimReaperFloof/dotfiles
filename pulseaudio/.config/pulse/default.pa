@@ -1,0 +1,9 @@
+load-module module-native-protocol-unix
+load-module module-jack-sink
+load-module module-jack-source
+load-module module-stream-restore
+load-module module-rescue-streams
+load-module module-always-sink
+set-default-sink jack_out
+set-default-source jack_in
+
