@@ -2,11 +2,11 @@
 ## Installation
 Requirements:  
 `stow`  
-i3: `i3`, `polybar`, `dunst`, `picom`  
+i3: `i3` `polybar` `dunst` `picom`  
 termite: `termite`  
-zsh: `lf`, `oh-my-zsh`  
-pulseaudio: `pulseaudio`, `jack` or `jack2`, `pulseaudio-jack`  
-jackd.service: `systemd`, `jack` or `jack2`  
+zsh: `lf` `oh-my-zsh`  
+pulseaudio: `pulseaudio` `jack2` `pulseaudio-jack`  
+jackd.service: `systemd` `jack2`  
 
 `stow i3` - sets up i3, polybar, dunst, and picom  
 `stow termite` - sets up termite  
