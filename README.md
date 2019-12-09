@@ -2,7 +2,7 @@
 ## Installation
 Requirements:  
 `stow`  
-i3: `i3` `polybar` `dunst` `picom`  
+i3: `i3` `polybar` `dunst` `picom` `rofimoji`  
 termite: `termite`  
 zsh: `lf` `oh-my-zsh`  
 pulseaudio: `pulseaudio` `jack2` `pulseaudio-jack`  
