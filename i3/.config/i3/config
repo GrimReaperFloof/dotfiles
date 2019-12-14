@@ -55,6 +55,8 @@ bindsym $mod+minus exec amixer set 'Master' 2%-
 bindsym $mod+Ctrl+p exec mpc toggle
 bindsym $mod+Ctrl+comma exec mpc prev
 bindsym $mod+Ctrl+period exec mpc next
+bindsym $mod+Ctrl+Shift+comma exec mpc seek -10
+bindsym $mod+Ctrl+Shift+period exec mpc seek +10
 bindsym $mod+Ctrl+equal exec mpc volume +5
 bindsym $mod+Ctrl+minus exec mpc volume -5
 
