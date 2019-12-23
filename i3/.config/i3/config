@@ -15,6 +15,14 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:monospace 8
 
+# Remove borders
+for_window [class=".*"] border pixel 0
+
+# Gaps
+gaps inner 3
+gaps outer -3
+smart_gaps on
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -42,8 +50,8 @@ exec picom
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-# Start MPD
-exec mpd
+# Start MPD (uncomment if not handled by init system)
+#exec mpd
 
 # Volume Keybindings
 # Volume up
@@ -66,8 +74,8 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
-# Open tabbed surf
-bindsym $mod+Shift+s exec tabbed -c surf -e
+# Open Chromium
+bindsym $mod+Shift+s exec chromium
 
 # kill focused window
 bindsym $mod+Shift+q kill
