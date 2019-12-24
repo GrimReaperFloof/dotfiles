@@ -16,7 +16,9 @@ set $mod Mod4
 font pango:monospace 8
 
 # Remove borders
-for_window [class=".*"] border pixel 0
+#for_window [class=".*"] border pixel 0
+default_border none
+default_floating_border normal 0
 
 # Gaps
 gaps inner 3
