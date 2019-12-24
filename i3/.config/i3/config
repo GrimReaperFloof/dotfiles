@@ -68,6 +68,12 @@ bindsym $mod+Ctrl+Shift+period exec mpc seek +10
 bindsym $mod+Ctrl+equal exec mpc volume +5
 bindsym $mod+Ctrl+minus exec mpc volume -5
 
+# Flameshot keybindings
+# Take screenshot of entire screen
+bindsym Print exec flameshot full -p ~/Screenshots -c
+# Take screenshot of region
+bindsym Ctrl+Print exec flameshot gui
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
