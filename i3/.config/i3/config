@@ -76,6 +76,10 @@ bindsym Print exec flameshot full -p ~/Screenshots -c
 # Take screenshot of region
 bindsym Ctrl+Print exec flameshot gui
 
+# Recording keybindings
+bindsym $mod+Print exec dmenurecord
+bindsym $mod+Shift+Print exec dmenurecord kill
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
