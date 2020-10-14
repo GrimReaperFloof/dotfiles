@@ -27,7 +27,7 @@ killrecording() {
 	exit
 	}
 
-screencast() { \
+lossy() { \
 	ffmpeg -y \
 	-f x11grab \
 	-framerate 60 \
@@ -36,10 +36,23 @@ screencast() { \
 	-f jack -i ffmpeg \
 	-r 30 \
  	-c:v libx264rgb -crf 23 -preset ultrafast -c:a flac \
-	"$HOME/Recordings/screencast-$(date '+%y%m%d-%H%M-%S').mkv" &
+	"$HOME/Recordings/lossy-$(date '+%y%m%d-%H%M-%S').mkv" &
 	echo $! > /tmp/recordingpid
 	updateicon "⏺️🎙️"
        	}
+
+lossless() { \
+        ffmpeg -y \
+        -f x11grab \
+        -framerate 60 \
+        -s $(xdpyinfo | grep dimensions | awk '{print $2;}') \
+        -i $DISPLAY \
+        -f jack -i ffmpeg \
+        -c:v libx264rgb -crf 0 -preset ultrafast -c:a flac \
+        "$HOME/Recordings/lossless-$(date '+%y%m%d-%H%M-%S').mkv" &
+        echo $! > /tmp/recordingpid
+        updateicon "⏺️ 🎙️ "
+        }
 
 video() { ffmpeg \
 	-f x11grab \
@@ -61,9 +74,10 @@ audio() { \
 	}
 
 askrecording() { \
-	choice=$(printf "screencast\\nvideo\\naudio" | dmenu -i -p "Select recording style:")
+	choice=$(printf "lossy\\nlossless\\nvideo\\naudio" | dmenu -i -p "Select recording style:")
 	case "$choice" in
-		screencast) screencast;;
+		lossy) lossy;;
+		lossless) lossless;;
 		audio) audio;;
 		video) video;;
 	esac
@@ -76,7 +90,8 @@ asktoend() { \
 
 
 case "$1" in
-	screencast) screencast;;
+	lossy) lossy;;
+	lossless) lossless;;
 	audio) audio;;
 	video) video;;
 	kill) killrecording;;
