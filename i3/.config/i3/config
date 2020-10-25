@@ -80,6 +80,9 @@ bindsym $mod+Shift+Print exec dmenurecord kill
 # Low Mouse Sensitivity Toggle
 bindsym $mod+Shift+z exec lowmousetoggle
 
+# Mouse Keys Toggle
+bindsym $mod+Shift+m exec mousekeys
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
