@@ -4,7 +4,7 @@ TOGGLE=/tmp/mousekeystoggle
 
 if [ ! -e $TOGGLE ]; then
     touch $TOGGLE
-    xmodmap -e "keycode 24 = Pointer_Button1 Pointer_Button1"
+    xmodmap -e "keycode 24 = Pointer_Button1"
     xmodmap -e "keycode 25 = Pointer_Button2"
     xmodmap -e "keycode 26 = Pointer_Button3"
 else
