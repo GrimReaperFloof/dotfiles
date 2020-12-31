@@ -45,9 +45,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Set background
-exec nitrogen --restore
+exec --no-startup-id nitrogen --restore
 
-exec picom
+exec --no-startup-id picom
 
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -82,6 +82,9 @@ bindsym $mod+Shift+z exec lowmousetoggle
 
 # Mouse Keys Toggle
 bindsym $mod+Shift+m exec mousekeys
+
+# Dictionary lookup from selection
+bindsym $mod+Shift+d exec termite -e "dict $(xclip -o)" --hold
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
